@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: telegram-channel-monitor
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_API_ID
+        sync: false
+      - key: TELEGRAM_API_HASH
+        sync: false
+      - key: TARGET_CHANNELS
+        sync: false
+      - key: KEYWORDS
+        sync: false
+      - key: ALERT_DESTINATION
+        value: me
+      - key: SCHEDULE_ENABLED
+        value: "True"
+      - key: START_HOUR
+        value: "7"
+      - key: END_HOUR
+        value: "20"
+      - key: TELEGRAM_STRING_SESSION
+        sync: false

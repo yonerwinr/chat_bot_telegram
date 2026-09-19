@@ -1,0 +1,12 @@
+# Archivos de entorno y credenciales
+.env
+*.session
+*.session-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+venv/
+.venv/
